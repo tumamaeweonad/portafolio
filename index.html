@@ -10,7 +10,6 @@
   <style>
     :root {
       --bg: #030712;
-      /* Cambiado a fondos opacos sólidos para eliminar el lag del blur */
       --panel: #0b1329;
       --panel-hover: #1e293b;
       --panel-border: rgba(255, 255, 255, 0.08);
@@ -37,7 +36,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Animación optimizada con hardware activo */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -59,7 +57,6 @@
       background: rgba(3, 7, 18, 0.85);
       border-bottom: 1px solid var(--panel-border);
       z-index: 100;
-      /* Dejado solo aquí de forma ligera */
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
@@ -125,12 +122,10 @@
       width: 100%;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       transition: background 0.3s var(--ease-ui), border-color 0.3s var(--ease-ui), box-shadow 0.3s var(--ease-ui);
-      will-change: transform, background, border-color, box-shadow;
     }
 
     .panel h3 { margin: 0 0 16px 0; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; }
 
-    /* Concept cards optimizadas para rendimiento fluido */
     .concept-card {
       transition: transform 0.4s var(--ease-ui), box-shadow 0.4s var(--ease-ui), background 0.3s var(--ease-ui), border-color 0.3s var(--ease-ui);
     }
@@ -141,7 +136,6 @@
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     }
 
-    /* Resplandores optimizados (usando box-shadow estándar en vez de drop-shadow de capas) */
     .concept-card.weak:hover { border-color: #10b981; box-shadow: 0 12px 25px rgba(16, 185, 129, 0.15); }
     .concept-card.strong:hover { border-color: #ef4444; box-shadow: 0 12px 25px rgba(239, 68, 68, 0.15); }
     .concept-card.ml:hover { border-color: #3b82f6; box-shadow: 0 12px 25px rgba(59, 130, 246, 0.15); }
@@ -218,7 +212,6 @@
       background: #020617;
     }
 
-    /* --- Media Queries --- */
     @media(max-width: 800px) {
       .hero {
         grid-template-columns: 1fr; 
@@ -269,7 +262,7 @@
         <a href="#ia" class="btn primary">Ver IA</a>
         <a href="#contacto" class="btn">Contacto</a>
       </div>
-      <img src="img/sinsemen.webp" class="avatar" alt="Foto de perfil de Cristobal Aravena">
+      <img src="img/king-nasir.gif" class="avatar" alt="GIF de King Nasir">
     </div>
   </section>
 
@@ -367,4 +360,5 @@
 </div>
 
 </body>
+</html>
 </html>
