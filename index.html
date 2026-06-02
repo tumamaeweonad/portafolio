@@ -11,14 +11,13 @@
     :root {
       --bg: #030712;
       --panel: rgba(15, 23, 42, 0.45);
-      --panel-hover: rgba(30, 41, 59, 0.6);
+      --panel-hover: rgba(30, 41, 59, 0.60);
       --panel-border: rgba(255, 255, 255, 0.08);
       --muted: #94a3b8;
       --text: #f3f4f6;
       --accent: #3b82f6;
       --accent-glow: rgba(59, 130, 246, 0.25);
       
-      /* Curva de movimiento suave y premium */
       --ease-ui: cubic-bezier(0.2, 0.8, 0.2, 1);
       --transition-ui: all 0.5s var(--ease-ui);
     }
@@ -38,7 +37,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Animación de entrada suave para la página */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -129,35 +127,43 @@
       padding: 28px;
       width: 100%;
       box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-      transition: background 0.4s var(--ease-ui), border-color 0.4s var(--ease-ui), box-shadow 0.4s var(--ease-ui);
+      transition: background 0.4s var(--ease-ui), border-color 0.4s var(--ease-ui), box-shadow 0.4s var(--ease-ui), filter 0.4s var(--ease-ui);
     }
 
     .panel h3 { margin: 0 0 16px 0; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; }
 
-    /* Concept cards con movimientos de elevación fluidos */
+    /* Concept cards corregidas con bordes perfectos y resplandor sutil */
     .concept-card {
-      position: relative;
-      padding-top: 32px;
-      transition: transform 0.5s var(--ease-ui), box-shadow 0.5s var(--ease-ui), background 0.4s var(--ease-ui), border-color 0.4s var(--ease-ui);
+      transition: transform 0.5s var(--ease-ui), box-shadow 0.5s var(--ease-ui), background 0.4s var(--ease-ui), border-color 0.4s var(--ease-ui), filter 0.4s var(--ease-ui);
     }
+    
     .concept-card:hover {
       transform: translateY(-6px);
       background: var(--panel-hover);
-      border-color: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
     }
-    .concept-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      border-radius: 20px 20px 0 0;
+
+    /* Variantes con iluminación limpia basada en su categoría */
+    .concept-card.weak:hover { 
+      border-color: rgba(16, 185, 129, 0.4); 
+      filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.15));
     }
-    .concept-card.weak::before { background: #10b981; }
-    .concept-card.strong::before { background: #ef4444; }
-    .concept-card.ml::before { background: #3b82f6; }
-    .concept-card.dl::before { background: #8b5cf6; }
-    .concept-card.nlp::before { background: #f59e0b; }
+    .concept-card.strong:hover { 
+      border-color: rgba(239, 68, 114, 0.4); 
+      filter: drop-shadow(0 4px 12px rgba(239, 68, 114, 0.15));
+    }
+    .concept-card.ml:hover { 
+      border-color: rgba(59, 130, 246, 0.4); 
+      filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.15));
+    }
+    .concept-card.dl:hover { 
+      border-color: rgba(139, 92, 246, 0.4); 
+      filter: drop-shadow(0 4px 12px rgba(139, 92, 246, 0.15));
+    }
+    .concept-card.nlp:hover { 
+      border-color: rgba(245, 158, 11, 0.4); 
+      filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.15));
+    }
 
     .concept-title {
       display: flex; align-items: center; gap: 10px; margin: 0 0 12px 0;
