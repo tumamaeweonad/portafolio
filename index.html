@@ -72,7 +72,10 @@
     
     .grid-main { display: flex; flex-direction: column; gap: 28px; }
     .grid-concepts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
-    .btn { display: inline-block; padding: 12px 26px; font-size: 14px; font-weight: 600; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); color: #e2e8f0; text-decoration: none; transition: transform 0.3s var(--ease-ui); }
+    .contacto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 12px; }
+    .contacto-item { display: flex; flex-direction: column; gap: 14px; justify-content: space-between; }
+    
+    .btn { display: inline-block; padding: 12px 26px; font-size: 14px; font-weight: 600; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); color: #e2e8f0; text-decoration: none; text-align: center; transition: transform 0.3s var(--ease-ui); }
     .btn.primary { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: #030712; border: none; }
     
     @media(max-width: 800px) {
@@ -112,7 +115,6 @@
     <div class="container">
       <h2>Inteligencia Artificial</h2>
       <div class="grid-main">
-        
         <div class="panel">
           <h3>Historia: El camino hacia la singularidad</h3>
           <p style="color: #cbd5e1;">La IA comenzó formalmente en el seminario de Dartmouth (1956). Hemos pasado de la lógica simbólica y los sistemas expertos rígidos a un paradigma basado en Big Data. Hoy, la convergencia entre computación distribuida, GPUs y modelos Transformers ha cambiado radicalmente nuestra interacción con la tecnología.</p>
@@ -123,7 +125,7 @@
           <div class="grid-concepts">
             <div class="panel concept-card"><h4>🟢 IA Débil</h4><p style="font-size: 14px;">Sistemas especializados en dominios acotados mediante lógica probabilística; sin modelo del mundo ni generalización real.</p></div>
             <div class="panel concept-card"><h4>🔴 IA Fuerte</h4><p style="font-size: 14px;">El "Santo Grial". Sistemas con capacidad de razonamiento, conciencia y adaptabilidad transversal equivalente a la humana.</p></div>
-            <div class="panel concept-card"><h4>🔵 Machine Learning</h4><p style="font-size: 14px;">Paradigma donde el sistema ajusta pesos matemáticos ($\hat{y} = f(x; \theta)$) para minimizar errores sin ser explícitamente programado.</p></div>
+            <div class="panel concept-card"><h4>🔵 Machine Learning</h4><p style="font-size: 14px;">Paradigma donde el sistema ajusta pesos matemáticos para minimizar errores sin ser explícitamente programado.</p></div>
             <div class="panel concept-card"><h4>🟣 Deep Learning</h4><p style="font-size: 14px;">Subcampo basado en redes neuronales profundas que permite la extracción automática de jerarquías de características complejas.</p></div>
             <div class="panel concept-card"><h4>🟠 PLN</h4><p style="font-size: 14px;">Campo que utiliza modelos estadísticos y *embeddings* para traducir la estructura sintáctica del lenguaje humano a espacios vectoriales.</p></div>
           </div>
@@ -131,13 +133,34 @@
 
         <div class="panel">
           <h3>Visión Profesional: La IA como herramienta, no como reemplazo</h3>
-          <p style="color: #cbd5e1;">Como estudiante de Ingeniería, veo la IA como el habilitador tecnológico más potente de nuestra era. Mi enfoque no es solo utilizar librerías existentes, sino comprender la arquitectura detrás de ellas para construir soluciones éticas y seguras. La IA será nuestro "copiloto" definitivo: obligará al ingeniero a elevar su nivel, pasando de ser un "escritor de código" a un "arquitecto de soluciones complejas".</p>
+          <p style="color: #cbd5e1;">Como estudiante de Ingeniería, entiendo la IA como el habilitador tecnológico más disruptivo de nuestra era. Mi enfoque no es solo utilizar librerías, sino comprender la arquitectura y la lógica estadística detrás de ellas para construir soluciones éticas y robustas. Creo firmemente que la IA actuará como un "copiloto" que elevará nuestro rol: el ingeniero del futuro no será solo un escritor de código, sino un arquitecto de sistemas complejos donde la ciberseguridad y la gobernanza de datos serán pilares fundamentales.</p>
         </div>
-
       </div>
     </div>
   </section>
-  
+
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <div class="panel">
+        <div class="contacto-grid">
+          <div class="contacto-item">
+            <p style="font-weight: 500; color: #e2e8f0;">Email: aravenacr@pregrado.ubo.cl</p>
+            <a href="mailto:aravenacr@pregrado.ubo.cl" class="btn primary">Enviar Email</a>
+          </div>
+          <div class="contacto-item">
+            <p style="display: flex; align-items: center; gap: 10px; font-weight: 500; color: #e2e8f0;">Instagram: @aravenita_ksk</p>
+            <a href="https://instagram.com/aravenita_ksk" target="_blank" class="btn">Ver Perfil</a>
+          </div>
+          <div class="contacto-item">
+            <p style="display: flex; align-items: center; gap: 10px; font-weight: 500; color: #e2e8f0;">GitHub: tumamaeweonad</p>
+            <a href="https://github.com/tumamaeweonad" target="_blank" class="btn">Link GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>© 2026 · Portafolio</footer>
 </div>
 </body>
